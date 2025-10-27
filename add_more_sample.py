@@ -3,9 +3,10 @@ import math
 from PIL import Image
 
 # -------------------------- 请在这里指定文件夹路径 --------------------------
-input_images_dir = "D:/pyLearn/countSteel/images"    # 输入图片文件夹（包含.bmp文件）
-input_labels_dir = "D:/pyLearn/countSteel/labels"    # 输入标签文件夹（包含.txt文件）
-output_base = "D:/pyLearn/countSteel/steel_sample"          # 输出结果保存的根文件夹
+base_dir = "D:/pyLearn/countSteel"  # 根文件夹路径
+input_images_dir = os.path.join(base_dir, "images")    # 输入图片文件夹（包含.bmp文件）
+input_labels_dir = os.path.join(base_dir, "labels")    # 输入标签文件夹（包含.txt文件）
+output_base = os.path.join(base_dir, "steel_sample")        # 输出结果保存的根文件夹
 # --------------------------------------------------------------------------
 
 # 检查输入文件夹是否存在

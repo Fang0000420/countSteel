@@ -3,9 +3,10 @@ import math
 from PIL import Image, ImageDraw
 
 # -------------------------- 请在这里指定文件夹路径和参数 --------------------------
-img_dir = "D:/pyLearn/countSteel/task"       # 图片文件夹（存放.bmp文件）
-label_dir = "D:/pyLearn/countSteel/runs/detect/predict/labels"     # 标签文件夹（存放.txt文件）
-output_dir = "D:/pyLearn/countSteel/results"    # 输出文件夹（保存标记后的图片）
+base_dir = "D:/pyLearn/countSteel/"
+img_dir = os.path.join(base_dir, "task")       # 图片文件夹（存放.bmp文件）
+label_dir = os.path.join(base_dir, "runs/detect/predict/labels")     # 标签文件夹（存放.txt文件）
+output_dir = os.path.join(base_dir, "results")    # 输出文件夹（保存标记后的图片）
 distance_threshold = 20  # 点之间的距离阈值（像素），小于此值视为"过于接近"
 dot_radius = 5           # 彩色圆点的半径（像素）
 min_y_ratio = 0.5        # 保留y中心坐标>此值的点（相对值，0.5即图像下半部分）

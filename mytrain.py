@@ -1,8 +1,10 @@
 from ultralytics import YOLO
+import os
 
-model = YOLO('yolo11n.pt')
+base_dir = 'D:/pyLearn/countSteel/'
+model = YOLO(os.path.join(base_dir, 'yolo11n.pt'))
 model.train(
-    data='D:\pyLearn\countSteel\steel.yaml',
+    data=os.path.join(base_dir, 'steel.yaml'),
     epochs=100,
     imgsz=640,
     batch=16
