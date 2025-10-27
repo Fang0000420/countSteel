@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import os
 
-base_dir = 'D:/pyLearn/countSteel/' # 根目录路径
+base_dir = 'base_dir' # 根目录路径
 model = YOLO(os.path.join(base_dir, 'runs/detect/train/weights/best.pt'))
 model.predict(
     source=os.path.join(base_dir, 'task'),

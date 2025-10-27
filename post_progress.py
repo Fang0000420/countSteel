@@ -3,7 +3,7 @@ import math
 from PIL import Image, ImageDraw
 
 # -------------------------- 请在这里指定文件夹路径和参数 --------------------------
-base_dir = "D:/pyLearn/countSteel/"
+base_dir = "base_dir"
 img_dir = os.path.join(base_dir, "task")       # 图片文件夹（存放.bmp文件）
 label_dir = os.path.join(base_dir, "runs/detect/predict/labels")     # 标签文件夹（存放.txt文件）
 output_dir = os.path.join(base_dir, "results")    # 输出文件夹（保存标记后的图片）

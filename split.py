@@ -3,6 +3,13 @@ import shutil
 import random
 from pathlib import Path
 
+
+# 设置路径
+base_dir = "base_dir"
+image_directory = os.path.join(base_dir, "steel_sample/images")  # 源图片文件夹
+label_directory = os.path.join(base_dir, "steel_sample/labels")  # 源标签文件夹
+output_directory = os.path.join(base_dir, "datasets/steel")  # 输出文件夹
+    
 def split_dataset(image_dir, label_dir, output_dir, train_ratio=0.7, test_ratio=0.2, val_ratio=0.1):
     """
     划分数据集并复制到指定目录
@@ -97,11 +104,6 @@ def split_dataset(image_dir, label_dir, output_dir, train_ratio=0.7, test_ratio=
     print("数据集划分完成!")
 
 if __name__ == "__main__":
-    # 设置路径
-    base_dir = "D:/pyLearn/countSteel/"
-    image_directory = os.path.join(base_dir, "steel_sample/images")  # 源图片文件夹
-    label_directory = os.path.join(base_dir, "steel_sample/labels")  # 源标签文件夹
-    output_directory = os.path.join(base_dir, "datasets/steel")  # 输出文件夹
 
     # 设置划分比例 - 可以根据需要调整
     train_ratio = 0.7   # 70% 训练集
