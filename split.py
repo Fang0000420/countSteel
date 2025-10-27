@@ -100,7 +100,7 @@ if __name__ == "__main__":
     # 设置路径
     image_directory = "D:/pyLearn/countSteel/steel_sample/images"  # 源图片文件夹
     label_directory = "D:/pyLearn/countSteel/steel_sample/labels"  # 源标签文件夹
-    output_directory = "D:/pyLearn/countSteel/steel"  # 输出文件夹
+    output_directory = "D:/pyLearn/countSteel/datasets/steel"  # 输出文件夹
 
     # 设置划分比例 - 可以根据需要调整
     train_ratio = 0.7   # 70% 训练集
