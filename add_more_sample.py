@@ -158,7 +158,7 @@ def process_file(image_path, label_path, base_name):
     img.save(os.path.join(output_base, "images", f"{base_name}_original.png"))
     write_yolo_labels(os.path.join(output_base, "labels", f"{base_name}_original.txt"), labels)
     
-    # 旋转处理（包含90/180/270和45/135/225/315度）
+    # 旋转处理（包含90/180/270度）
     for angle in [90, 180, 270]:
         rot_img, rot_labels = rotate_image_and_label(img, labels, angle)
         rot_img.save(os.path.join(output_base, "images", f"{base_name}_rot{angle}.png"))
